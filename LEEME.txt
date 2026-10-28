@@ -1,0 +1,18 @@
+TRACKER FINANCIERO - publicar en GitHub Pages
+
+1. Entra a github.com e inicia sesión. Toca "+" > "New repository".
+2. Nombre: finanzas (o el que quieras). Marca "Public" (Pages gratis lo exige) y "Add a README". Crea el repositorio.
+   Aunque el repositorio sea público, tus movimientos NO se suben: viven solo en tu teléfono.
+3. En el repositorio: "Add file" > "Upload files". Arrastra TODO el contenido de esta carpeta
+   (index.html, manifest.webmanifest, sw.js y la carpeta icons). Baja y toca "Commit changes".
+4. Ve a "Settings" > "Pages". En "Build and deployment", Source: "Deploy from a branch".
+   Branch: main, carpeta /(root). Guarda.
+5. Espera 1 a 2 minutos. Arriba de esa página aparece tu enlace:
+   https://TU-USUARIO.github.io/finanzas/
+6. En el iPhone, abre ese enlace en SAFARI > Compartir > "Añadir a pantalla de inicio".
+   Ábrela siempre desde ese ícono. Ahí se guardan tus datos.
+
+Importante: los datos son por navegador y por dirección. Lo que registres en Safari NO aparece en el ícono
+de la pantalla de inicio, y al revés. Usa solo el ícono.
+Respaldo: Ajustes > "Guardar respaldo". Para pasar datos a otro teléfono: "Restaurar desde un respaldo".
+Acceso directo: añade #rapido al enlace (.../finanzas/#rapido) para abrir directo en registrar gasto.
