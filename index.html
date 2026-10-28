@@ -16,7 +16,8 @@
 </head>
 <body>
 <style>
-html,body{margin:0}
+html,body{margin:0;overscroll-behavior-y:none}
+html{scroll-behavior:auto}
 body{min-height:100vh;min-height:100dvh}
 
 /* Layout: header azul fijo con marca y dos pestañas (Registrar, Historial); Historial tiene su propia sub-navegación para desglosar. Columna blanca estilo banca móvil. */
@@ -44,7 +45,7 @@ a{color:inherit}
 .wrap{width:100%;max-width:640px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 
 /* header */
-.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:linear-gradient(180deg,var(--b900),var(--b800));color:#fff}
+.top{position:sticky;top:0;padding-top:env(safe-area-inset-top,0px);z-index:20;background:linear-gradient(180deg,var(--b900),var(--b800));color:#fff}
 .top-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:12px 4px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;min-width:0}
 .mark{width:32px;height:32px;border-radius:10px;background:rgba(255,255,255,.16);display:grid;place-items:center}
@@ -1232,7 +1233,7 @@ function init(){
     var t=ev.target;
     if(t.closest('#sp-go')){
       var sp=$('#splash');sp.classList.add('out');
-      setTimeout(function(){sp.hidden=true;},260);return;
+      setTimeout(function(){sp.hidden=true;window.scrollTo(0,0);},260);return;
     }
     var goEl=t.closest('[data-go]');if(goEl){go(goEl.dataset.go);return;}
     var rg=t.closest('[data-reg]');
@@ -1326,6 +1327,8 @@ init();
 })();
 </script>
 <script>
+try{history.scrollRestoration='manual';}catch(e){}
+window.addEventListener('load',function(){window.scrollTo(0,0);});
 if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){});});}
 </script>
 </body>
